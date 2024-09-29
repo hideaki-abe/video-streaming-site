@@ -7,7 +7,7 @@
 
     <!-- 最新の動画セクション -->
     <section class="main-video-section">
-        <h2>最新動画</h2> 
+        <h2>最新動画</h2>
         <div class="main-video">
             <?php
             // データベースから最新動画取得
@@ -90,7 +90,6 @@
                 // 結果がある場合は動画をループ表示
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        $formatted_time = date("n/j H:i", strtotime($row['upload_date']));
                         echo '
                         <div class="video-item">
                             <a href="video.php?id=' . $row['id'] . '"> <!-- 動画の詳細ページへのリンク -->
@@ -100,7 +99,7 @@
                                 </video>
                                 <h3>' . $row['title'] . '</h3> <!-- 動画のタイトル -->
                             </a>
-                            <p>投稿 ' . $formatted_time . '</p> <!-- 投稿日時を表示 -->
+                            <p>いいね ' . $row['like_count'] . '</p> <!-- いいね数の表示 -->
                         </div>';
                     }
                 } else {
