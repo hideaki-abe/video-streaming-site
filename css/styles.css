@@ -1,0 +1,432 @@
+/* ベーススタイル */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* サイトタイトルのスタイル */
+.site-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e50914;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+/* ヘッダーのスタイル */
+.main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #333, #1c1c1c);
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: #e50914;
+    text-decoration: underline;
+}
+
+/* フッターのスタイル */
+.main-footer {
+    background: linear-gradient(180deg, #1c1c1c, #333);
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-footer p {
+    margin: 0;
+}
+
+/* メイン動画のスタイル */
+.main-video-section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+.main-video .video-item {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.main-video video {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+}
+
+/* スライダーセクションのスタイル */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.video-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.video-slider .video-item {
+    flex: 0 0 280px;
+    text-align: center;
+}
+
+.video-item video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-item p {
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* スライダーボタンのスタイル */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.slider-button.left {
+    left: 0;
+}
+
+.slider-button.right {
+    right: 0;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* セリフ一覧のスクロール表示 */
+.comment-display-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.comment-item {
+    background-color: transparent;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment-item p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* コメントのいいねと投稿時間の表示スタイル */
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.comment-info span {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-right: 15px;
+}
+
+.comment-likes {
+    margin-left: 10px;
+}
+
+.like-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.like-button:hover {
+    background-color: #d40813;
+}
+
+/* 並び替えオプションのスタイル */
+.sort-comments {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sort-comments h2 {
+    color: #e50914;
+}
+
+.sort-comments a {
+    color: #e50914;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.sort-comments a:hover {
+    text-decoration: underline;
+}
+
+/* セリフ投稿フォームのスタイル */
+.comment-section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comment-section h2 {
+    margin-bottom: 15px;
+    color: #e50914;
+}
+
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #333;
+    color: #fff;
+}
+
+.submit-comment {
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-comment:hover {
+    background-color: #d40813;
+}
+
+/* 動画投稿ページと詳細ページのレスポンシブデザイン */
+.upload-container,
+.video-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+h1.upload-title,
+h1.video-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #e50914;
+    padding-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.upload-button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.upload-button:hover {
+    background-color: #d40813;
+}
+
+.video-wrapper video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2rem;
+        padding-top: 50px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .site-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-video .video-item {
+        width: 100%;
+    }
+
+    .video-slider .video-item {
+        flex: 0 0 200px;
+    }
+
+    .slider-button {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .video-title {
+        font-size: 1.5rem;
+    }
+
+    .video-wrapper video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .upload-container,
+    .video-detail-container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    h1.upload-title,
+    h1.video-title {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .upload-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .comment-section textarea {
+        font-size: 0.9rem;
+    }
+
+    .comment-display-wrapper {
+        max-height: 300px;
+    }
+}
